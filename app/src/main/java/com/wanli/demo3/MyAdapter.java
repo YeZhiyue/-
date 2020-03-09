@@ -1,5 +1,5 @@
 package com.wanli.demo3;
-/************************BaseAdapter:ImageAdapter********************************/
+/************************BaseAdapter:MyAdapter********************************/
 /************************制定时间：2020/3/6 0006********************************/
 /**
  *功能：构建适配器对象
@@ -20,12 +20,12 @@ import android.widget.GridView;
 import android.widget.ImageView;
 
 //创建ImageAdapter
-public class ImageAdapter extends BaseAdapter {
+public class MyAdapter extends BaseAdapter {
     private Context mContext;  //获取上下文
     private Integer[] $pictureArray$ = {R.drawable.a1, R.drawable.a2, R.drawable.a3,
             R.drawable.a4,};
 
-    public ImageAdapter(Context c) {
+    public MyAdapter(Context c) {
         mContext = c;
     }
 
@@ -60,4 +60,4 @@ public class ImageAdapter extends BaseAdapter {
         return imageView; //返回ImageView
     }
 }
-/**----------------------------END：Activity:ImageAdapter------------------------------------**/
+/**----------------------------END：Activity:MyAdapter------------------------------------**/

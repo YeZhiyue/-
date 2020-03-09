@@ -1,0 +1,32 @@
+我的进步：
+
+第一周作业：
+    1.正则表达式：
+        1.匹配全字符，不包括标点符号
+        2.特殊字符积累：
+    2.对dp的了解，对px的了解，对sp的了解
+        dp不是一个固定值，sp也不是，但是px就是固定的，所以
+        为了兼容更多的Android设备，我们多用非固定值
+    3.适配更多Android手机的界面
+        1.多使用相对布局
+        2.使用内外边距
+        3.多用dp、sp
+        4.考虑哪些部分大小可以固定，比如banner和bottom的部分，然后
+            可以以这些部分作为参考
+    4.学的的新的属性值
+        设置水平滚动条的drawable（如颜色）：android:scrollbarThumbHorizontal
+        设置垂直滚动条的drawable（如颜色）：android:scrollbarThumbVertical
+        设置水平滚动条背景（轨迹）的色drawable（如颜色）：android:scrollbarTrackHorizontal
+        设定滚动条宽度：android:scrollbarSize
+        ScrollView滚动条不显示：android:scrollbars="none"
+        ScrollView滚动条恒显示：android:fadeScrollbars="false"
+        图片的填充方式：fitCenter 不改变原图比例，非常棒
+    5.问题的发现
+        1.比较特殊，其他管理器没有发现这个情况。注意，HorizontalScrollView的父布
+            局管理器如果是LinearLayout的话，那么只有当LinearLayout的android:lay
+            out_width="wrap_content"属性值为wrap_content时，HorizontalScrollVi
+            ew的 android:layout_width="match_parent"属性match_parent才可以生效
+        2.match_parent其实根布局管理器的宽度不一定就是整个屏幕大小宽度
+        3.解决屏幕的适配，目前来说，通常以宽度配置match_parent，高度配置wrap_content比较适合
+          新闻的头部菜单滚动适配方案：通过margin来调试外边距使得视图更加完美。
+

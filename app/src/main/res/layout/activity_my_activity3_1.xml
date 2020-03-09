@@ -1,0 +1,15 @@
+<!--    &lt;!&ndash;
+    1.设置子组件的水平或者竖直排列、设置子组件相对于容器的相对位置
+    android:orientation="vertical"
+         vertical：一行一个组件  horizontal：一列一个组件
+    android:gravity="center"
+        -->
+<LinearLayout
+    android:id="@+id/linearLayout3"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    </LinearLayout>

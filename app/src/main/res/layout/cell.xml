@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--如果作为适配器的目标，cell的布局管理器的id值不是必须的，其组件需要必要的id值，
+类似于需要放到网格视图中的图片视图就需要为其制定一个id-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- 存放头像-->
+    <ImageView
+        android:id="@+id/imageAdapter"
+        android:paddingRight="10dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:adjustViewBounds="true"
+        android:background="#444444"
+        android:maxWidth="72dp"
+        android:maxHeight="72dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"/>
+
+</LinearLayout>

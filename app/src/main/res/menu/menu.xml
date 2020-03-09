@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--
+    说明：
+        1.id表示该菜单资源的唯一表示，通常和item点击事件配置使用
+        2.title表示该菜单项的内容
+            该title获取的方式由两种
+                1.直接定义字符串
+                2.通过字符串资源的引用
+    -->
+<item android:id="@+id/menu1" android:title="item1"></item>
+<item android:id="@+id/menu2" android:title="item2"></item>
+<item android:id="@+id/menu3" android:title="item3"></item>
+<!--<item android:id="@+id/menu4" android:title="@string/字符串资源name"></item>-->
+</menu>
+
+<!--    &lt;!&ndash;
+        1.外边距配置
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        2.配置子组件的相对布局、配置哪些子组件不受gravity属性影响
+        android:gravity="center"
+        android:ignoreGravity="@id/t1"-->
+<!--
+<RelativeLayout
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:ignoreGravity="@id/relativeLayout">
+    &lt;!&ndash;
+            1.组件间相对位置。可以在布局管理器和UI组件中设置。
+            android:layout_above="@+id/t2"
+            android:layout_below="@+id/t2"
+            android:layout_toLeftOf="@+id/t2"
+            android:layout_toRightOf="@+id/t2"
+            2.依次是相对于管理器水平居中、中心、垂直居中。指定组件和布局管理器的相对位置，依次是位于布局管理器的
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            3.组件间对齐，指定组件与其他组件的上、下、左、右之一对其
+            android:layout_alignTop="@+id/t2"
+            android:layout_alignBottom="@+id/t2"
+            android:layout_alignStart="@+id/t2"
+            android:layout_alignEnd="@+id/t2"
+            4.和管理器对齐，指定组件与布局管理器哪边对齐
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+        &ndash;&gt;&ndash;&gt;
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2px"
+        android:layout_toLeftOf="@+id/textView2"
+        android:background="#de627c"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="文本框1"
+
+        android:textSize="14pt" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2px"
+        android:background="#de627c"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="文本框2"
+
+        android:textSize="14pt" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2px"
+        android:layout_toRightOf="@+id/textView2"
+        android:background="#de627c"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="文本框3"
+
+        android:textSize="14pt" />
+</RelativeLayout>-->

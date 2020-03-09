@@ -1,0 +1,169 @@
+目录：
+    1.组件篇
+    2.适配器
+    3.Intent交互
+    4.Fragment
+    5.菜单文件解析
+    6.事件
+    7.ActionBar
+    8.对话框
+/************************JAVA:组件篇********************************/
+//1.创建组件、获取组件
+LinearLayout linearLayout2 = new LinearLayout(MainActivity.this);
+ScrollView scrollView = new ScrollView(MainActivity.this);
+TextView email = (TextView) findViewById(R.id.email);
+//2.组件属性设置
+linearLayout2.setOrientation(LinearLayout.VERTICAL);
+imageView.setImageResource(R.mipmap.advise)
+textView.setText(R.string.cidian);
+textView.setGravity(Gravity.START);设置权重
+布局中设置的方向是horizontal，设置成LayoutParams(0,heignt,weight) 即width需要设置权重就在width处为0
+布局中设置的方向是vertical，设置成LayoutParams(width,0,weight) 即heignt需要设置权重就在heignt处为0
+LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,0,1.0f);
+LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,1.0f,0);
+textView.setLayoutParams(lp);
+//3.组件嵌套设置
+linearLayout2.addView(imageView);
+linearLayout2.addView(textView);
+//4.组件属性获取
+((EditText) findViewById(R.id.et_email)).getText().toString();
+//5.其他
+finish();//关闭方法
+onCreate(null);//刷新方法
+
+/************************1JAVA:适配器********************************/
+//方法一
+String[] stringResource=new String[]{"全部","电影","图书","唱片","小事","用户","小组","群聊","游戏","活动"};
+ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,stringResource);
+//方法二
+ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+    this, R.array.stringResource/*表示引用的数组资源*/,
+    android.R.layout.simple_dropdown_item_1line);//创建一个适配器
+// 为适配器设置列表框下拉时的选项样式
+adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+// 将适配器与选择列表框关联
+spinner.setAdapter(adapter);
+
+/************************1JAVA:Intent交互********************************/
+/-----Intent获取和属性设置----/
+Intent intent = new Intent(MainActivity.this/*本类名*/, Activity.class/*目标类名*/);
+Intent intent = getIntent();//切换页面后获取Intent的方式
+ComponentName componentName = new ComponentName("com.wanli.demo", "com.wanli.demo.MainActivity3");
+intent.setComponent(componentName);
+intent.setAction(intent.ACTION_MAIN);  //设置action动作属性
+intent.addCategory(intent.CATEGORY_HOME); //设置categoty种类显示主屏幕
+intent.setAction(intent.ACTION_DIAL); //调用拨号面板
+intent.setData(Uri.parse("tel:13800138000")); //设置要拨打的号码
+intent.setAction(intent.ACTION_SENDTO); //调用发送短信息
+intent.setData(Uri.parse("smsto:5554")); //设置要发送的号码
+intent.putExtra("sms_body", "Welcome to Android!"); //设置要发送的信息内容
+/----最终Intent----/
+startActivity(intent);//切换页面
+startActivityForResult(intent, 0x11/*requestCode*/);//等待数据返回
+setResult(0x12, intent);    //设置返回的结果码，并返回调用该Activity的Activity
+finish();        //关闭当前Activity
+
+Bundle bundle = new Bundle();    //准备添加数据
+Bundle bundle = intent.getExtras();//获取Bundle对象中的数据
+bundle.putInt("imageId", imageId[position]);
+bundle.getString("email")
+intent.putExtras(bundle);    //将数据包保存到intent中
+intent.putExtra("sms_body", "Welcome to Android!"); //设置要发送的信息内容
+
+/************************1JAVA:Fragment********************************/
+FragmentManager fm = getFragmentManager();   // 获取Fragment
+FragmentTransaction ft = fm.beginTransaction(); // 开启一个事务
+Fragment fragment = null; //为fragmentragment初始化
+fragment = new MyFragment(); //创建第一个Fragment
+ft.replace(R.id.fragmentLayout,fragment); //替换Fragment
+ft.commit(); //提交事务
+
+/************************1JAVA:菜单文件解析********************************/
+ //下面两句固定写法，获取menu；根据事件来执行方法
+ registerForContextMenu(v);
+ openContextMenu(v);
+ @Override//解析菜单文件
+ public boolean onCreateOptionsMenu (Menu menu){
+     //MenuInflater的实例对象用于解析菜单资源文件的
+     MenuInflater inflater = getMenuInflater();
+     //进行解析
+     inflater.inflate(R.menu.指定你的菜单资源, menu);
+     return super.onCreateOptionsMenu(menu);
+ }
+
+  @Override//额外内容，直接通过方法重写生成菜单栏组件
+  public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+      super.onCreateContextMenu(menu, v, menuInfo);
+      menu.add("收藏");
+      menu.add("举报");
+  }
+
+/************************1JAVA:事件********************************/
+//单击事件
+ View.OnClickListener click = new View.OnClickListener() {
+     @Override
+     public void onClick(View v) {
+         Toast.makeText(MainActivity.this, "单机事件触发了！", Toast.LENGTH_SHORT).show();
+     }
+ };
+ //长按事件实现类
+ View.OnLongClickListener longClick=new View.OnLongClickListener(){
+     @Override
+     public boolean onLongClick(View v) {
+         Toast.makeText(MainActivity.this, "长按事件触发了！", Toast.LENGTH_SHORT).show();
+         //下面两句固定写法，获取menu
+         registerForContextMenu(v);
+         openContextMenu(v);
+         return false;
+     }
+ };
+ //触摸事件实现类
+ View.OnTouchListener touchListener=new View.OnTouchListener(){
+     @Override
+     public boolean onTouch(View v, MotionEvent event) {
+         if (event.getAction()==MotionEvent.ACTION_DOWN){
+             Toast.makeText(MainActivity.this, "按下触摸事件触发了！", Toast.LENGTH_SHORT).show();
+         }
+         if (event.getAction()==MotionEvent.ACTION_UP){
+             Toast.makeText(MainActivity.this, "抬起触摸事件触发了！", Toast.LENGTH_SHORT).show();
+         }
+         return true;
+     }
+ };
+
+/************************1JAVA:ActionBar********************************/
+ActionBar actionBar = getActionBar();
+//设置ActionBar的隐藏和显示
+actionBar.hide();
+actionBar.show();
+//设置ActionBar的标题不显示
+getSupportActionBar().setDisplayShowTitleEnabled(false)
+
+/************************1JAVA:对话框********************************/
+//创建名字字符串数组
+final String[] items = new String[]{"扎克伯格", "乔布斯", "拉里.埃里森", "安迪.鲁宾", "马云"};
+// 显示带单选列表项的对话框
+AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+//设置对话框的图标
+builder.setIcon(R.drawable.advise2);
+//设置对话框的标题
+builder.setTitle("如果让你选择，你最想做哪一个：");
+builder.setSingleChoiceItems(items, 0, new DialogInterface.OnClickListener() {
+    @Override
+    public void onClick(DialogInterface dialog, int which) {
+        //显示选择结果
+        Toast.makeText(MainActivity.this,
+                "您选择了" + items[which], Toast.LENGTH_SHORT).show();
+    }
+});
+//添加确定按钮
+builder.setPositiveButton("确定", null);
+// 创建对话框并显示
+builder.create().show();
+
+        flipper = (ViewFlipper) findViewById(R.id.flipper); //获取ViewFlipper
+        for (int i = 0; i < images.length; i++) {
+            ImageView imageView = new ImageView(this);
+            imageView.setImageResource(images[i]);
+            flipper.addView(imageView); //加载图片
+        }

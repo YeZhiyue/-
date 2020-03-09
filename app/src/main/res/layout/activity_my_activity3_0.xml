@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:gravity="center"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.wanli.demo3.MyActivity3_0">
+    <!--
+                星级评分条：星星个数，每次点亮或熄灭的星星数、星星的初始化数、星星是否可以改变
+                android:numStars="5"
+                android:stepSize="1"
+                android:rating="3"
+                android:isIndicator="false"
+            -->
+    <RatingBar
+        android:id="@+id/ratingBar3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="2px"
+        android:background="#9c3b7db7"
+        android:isIndicator="false"
+        android:numStars="8"
+        android:rating="3"
+        android:stepSize="0.5" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratingBar3"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_margin="2px"
+        android:background="#9d864949"
+        android:text="星选条详细数据"
+        android:textSize="10pt" />
+</RelativeLayout>
+
+
+

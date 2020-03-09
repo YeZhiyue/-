@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.wanli.demo3"
+        >
+
+    <!--
+    以下是仿照微信的ActionView示例，有搜索按钮、通讯录、扫一扫的+号
+    app:showAsAction="always" 设置，注意其前缀有点特殊，是app前缀而不是android
+        1.aways 表示这个菜单项始终显示在ActionBar上
+        2.collapseActionView
+        3.ifRoom 表示如果ActionBar上有显示空间的话这个item就显示在ActionBar上
+        4.never 表示这个item永远都不显示在ActionBar上
+        5.withText 指定item必须显示到ActionBar上并且显示这个item的文本，但是如果空间不足会导致看不到这个item
+    app:actionViewClass="android.support.v7.widget.SerchView"
+        这个属性需要使用一个actionview的实现类来实现
+    app:action-layout="@layout/img_message"
+        这个属性需要指定一个布局文件
+    -->
+    <!--下面这个放大镜图标，可以实现单机弹出搜索框-->
+    <item android:id="@+id/搜索图标"
+        android:title="搜索放大镜"
+        app:actionViewClass="android.support.v7.widget.SerchView"
+        app:showAsAction="always"></item>
+    <!-- app:action-layout="@+layout/menu_image"
+            这个属性加不上去，扎偶出问题所在
+        -->
+    <item android:id="@+id/通讯录"
+        android:title="通讯录"
+        app:showAsAction="always"></item>
+
+    <item android:id="@+id/扫一扫"
+        android:title="扫一扫"
+        app:showAsAction="always"></item>
+</menu>

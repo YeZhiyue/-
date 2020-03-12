@@ -43,9 +43,13 @@ public class MyActivity3_0 extends AppCompatActivity {
 //            int accessibilityTraversalAfter = ratingBar3.getAccessibilityTraversalAfter();
 //            Toast.makeText(MyActivity3_0.this,accessibilityLiveRegion+""+accessibilityTraversalBefore+""+accessibilityTraversalAfter,Toast.LENGTH_SHORT).show();
             //获取星选条数据
+            //获取总星数
             int numStars = ratingBar3.getNumStars();
+            //获取当前星星数
             float rating = ratingBar3.getRating();
+            //获取修改星星步长
             float stepSize = ratingBar3.getStepSize();
+            //获取是否可以修改星星数的权限
             boolean indicator = ratingBar3.isIndicator();
             Collections.addAll(list, Integer.toString(numStars), Float.toString(rating), Float.toString(stepSize), Boolean.toString(indicator));
             //设置传送目标Activity

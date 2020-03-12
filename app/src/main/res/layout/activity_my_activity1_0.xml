@@ -1,4 +1,8 @@
 <!--根布局管理器：使用相对布局管理器实现，目的是为了适配更多型号的Android设备-->
+<!--本质：
+        1.头尾都是固定的，通常with选择和父容器相同；height给一个固定值。
+        2.中间的部分是可以改变的，通过margin和padding来控制
+        -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"

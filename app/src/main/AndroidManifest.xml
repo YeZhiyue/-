@@ -15,11 +15,11 @@
         <activity
             android:name=".MyActivity1_0"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
-<!--                            <intent-filter>
+                            <intent-filter>
                             <action android:name="android.intent.action.MAIN" />
 
                             <category android:name="android.intent.category.LAUNCHER" />
-                        </intent-filter>-->
+                        </intent-filter>
         </activity>
         <!--第二周的Activity-->
         <activity android:name=".MyActivity2_0"></activity>
@@ -29,19 +29,6 @@
         <activity
             android:name=".MyActivity3_1"
             android:theme="@style/AppTheme.NoActionBar" />
-        <!--第四周的Activity-->
-        <activity
-            android:name=".MyActivity4_0"
-            android:theme="@style/AppTheme"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <!--第五周的Activity-->
-        <!--第六周的Activity-->
     </application>
 
 </manifest>

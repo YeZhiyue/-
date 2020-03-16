@@ -4,294 +4,293 @@
         2.中间的部分是可以改变的，通过margin和padding来控制
         -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#FFFFFF"
+  android:gravity="top">
+  <!--第一部分：网易新闻的头部，仅仅使用了一张图片-->
+  <!--第一部分：网易新闻的头部，仅仅使用了一张图片-->
+  <!--第一部分：网易新闻的头部，仅仅使用了一张图片-->
+  <ImageView
+    android:id="@+id/banner"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    android:gravity="top">
-    <!--第一部分：网易新闻的头部，仅仅使用了一张图片-->
-    <!--第一部分：网易新闻的头部，仅仅使用了一张图片-->
-    <!--第一部分：网易新闻的头部，仅仅使用了一张图片-->
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_gravity="center"
+    android:padding="-1dp"
+    android:adjustViewBounds="true"
+    android:src="@drawable/banner" />
+  <!--第二部分：滚动菜单栏，使用滚动UI组件实现-->
+  <!--第二部分：滚动菜单栏，使用滚动UI组件实现-->
+  <!--第二部分：滚动菜单栏，使用滚动UI组件实现-->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="37dp"
+    android:layout_alignParentBottom="true"
+    android:padding="3dp"
+    android:background="#d7f2e9e9"
+    android:gravity="center"
+    android:orientation="horizontal">
+
     <ImageView
-        android:id="@+id/banner"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_marginEnd="28dp"
+      android:adjustViewBounds="true"
+      android:src="@drawable/refresh" />
+
+    <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_marginStart="28dp"
+      android:layout_marginEnd="28dp"
+      android:adjustViewBounds="true"
+      android:src="@drawable/view"
+      android:tint="#c1685f5f" />
+
+    <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_marginStart="28dp"
+      android:layout_marginEnd="28dp"
+      android:adjustViewBounds="true"
+      android:src="@drawable/social" />
+
+    <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_marginStart="28dp"
+      android:adjustViewBounds="true"
+      android:src="@drawable/region" />
+  </LinearLayout>
+  <!--第三部分：新闻主题部分，选择了使用滚动条组件来实现-->
+  <!--第三部分：新闻主题部分，选择了使用滚动条组件来实现-->
+  <!--第三部分：新闻主题部分，选择了使用滚动条组件来实现-->
+  <!--注意：滚动条下仅仅允许有一个UI组件，如果要放置多个需要布局管理器配合使用-->
+  <RelativeLayout
+    android:id="@+id/menu"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_below="@+id/banner">
+    <!--注意：滚动条下仅仅允许有一个UI组件，如果要放置多个需要布局管理器配合使用-->
+    <HorizontalScrollView
+      android:layout_width="wrap_content"
+      android:layout_height="40dp"
+      android:layout_marginStart="5dp"
+      android:layout_marginEnd="50dp"
+      android:layout_alignParentLeft="true"
+      android:layout_gravity="left"
+      android:scrollbars="none">
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_marginStart="7.5dp"
+          android:layout_marginEnd="7.5dp"
+          android:gravity="center"
+          android:text="关注"
+          android:textColor="#e3151212"
+          android:textSize="18sp" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_marginStart="7.5dp"
+          android:layout_marginEnd="7.5dp"
+          android:gravity="center"
+          android:text="头条"
+          android:textColor="#e3151212"
+          android:textSize="18sp" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_marginStart="7.5dp"
+          android:layout_marginEnd="7.5dp"
+          android:background="#85d6cece"
+          android:gravity="center"
+          android:text="抗击肺炎"
+          android:textColor="#e3151212"
+          android:textSize="18sp" />
+
+        <TextView
+
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_marginStart="7.5dp"
+          android:layout_marginEnd="7.5dp"
+          android:gravity="center"
+          android:text="视频"
+          android:textColor="#e3151212"
+          android:textSize="18sp" />
+
+        <TextView
+
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_marginStart="7.5dp"
+          android:layout_marginEnd="7.5dp"
+          android:gravity="center"
+          android:text="娱乐"
+          android:textColor="#e3151212"
+          android:textSize="18sp" />
+
+        <TextView
+
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_marginStart="7.5dp"
+          android:layout_marginEnd="7.5dp"
+          android:gravity="center"
+          android:text="体育"
+          android:textColor="#e3151212"
+          android:textSize="18sp" />
+
+        <TextView
+
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_marginStart="7.5dp"
+          android:layout_marginEnd="7.5dp"
+          android:gravity="center"
+          android:text="新时代"
+          android:textColor="#e3151212"
+          android:textSize="18sp" />
+
+        <TextView
+
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_marginStart="7.5dp"
+          android:layout_marginEnd="7.5dp"
+          android:gravity="center"
+          android:text="要闻"
+          android:textColor="#e3151212"
+          android:textSize="18sp" />
+
+        <TextView
+
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_marginStart="7.5dp"
+          android:layout_marginEnd="7.5dp"
+          android:gravity="center"
+          android:text="段子"
+          android:textColor="#e3151212"
+
+          android:textSize="18sp" />
+
+        <TextView
+
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_marginStart="7.5dp"
+          android:layout_marginEnd="7.5dp"
+          android:gravity="center"
+          android:text="知否"
+          android:textColor="#e3151212"
+          android:textSize="18sp" />
+
+
+      </LinearLayout>
+    </HorizontalScrollView>
+    <!--
+                图像视图：设置图片缩放
+                android:scaleType="fitXY"
+                    fitXY 表示占满整个容器 matrix 表时等比例缩放并且占满整个屏幕
+                2.设置图片是否允许系统自动调整，接着设置图片最大宽度和高度。这两个属性通常配合使用
+                android:adjustViewBounds="true"
+                    true表示允许系统自动调整
+                android:maxWidth="30dp"
+                android:maxHeight="30dp"
+                3.设置图片表面着色，通常需要设置透明度
+                android:tint="#70dc3c3c"
+            -->
+    <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_marginTop="5dp"
+      android:layout_marginEnd="6dp"
+      android:layout_alignParentRight="true"
+      android:layout_gravity="right"
+      android:adjustViewBounds="true"
+      android:maxHeight="30dp"
+      android:maxWidth="30dp"
+      android:src="@drawable/list"
+      android:tint="#70dc3c3c" />
+  </RelativeLayout>
+  <!--第四部分：底部菜单，线性布局管理器+图片查看器来实现-->
+  <!--第四部分：底部菜单，线性布局管理器+图片查看器来实现-->
+  <!--第四部分：底部菜单，线性布局管理器+图片查看器来实现-->
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="450dp"
+    android:layout_marginBottom="37dp"
+    android:layout_below="@+id/menu"
+    android:layout_centerInParent="true"
+    android:background="#FFFFFF"
+    android:scrollbars="none">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="center"
+      android:orientation="vertical">
+
+      <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_gravity="center"
+        android:layout_margin="2px"
         android:adjustViewBounds="true"
-        android:padding="-1dp"
-        android:src="@drawable/banner" />
-    <!--第二部分：滚动菜单栏，使用滚动UI组件实现-->
-    <!--第二部分：滚动菜单栏，使用滚动UI组件实现-->
-    <!--第二部分：滚动菜单栏，使用滚动UI组件实现-->
-    <RelativeLayout
-        android:id="@+id/menu"
+        android:src="@drawable/content1" />
+
+      <ImageView
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_below="@+id/banner"
-        >
-        <!--注意：滚动条下仅仅允许有一个UI组件，如果要放置多个需要布局管理器配合使用-->
-        <HorizontalScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_gravity="left"
-            android:layout_marginEnd="50dp"
-            android:layout_marginStart="5dp"
-            android:layout_alignParentLeft="true"
-            android:scrollbars="none">
+        android:layout_height="wrap_content"
+        android:layout_margin="2px"
+        android:adjustViewBounds="true"
+        android:src="@drawable/content2" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="7.5dp"
-                    android:layout_marginStart="7.5dp"
-                    android:gravity="center"
-                    android:text="关注"
-                    android:textColor="#e3151212"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="7.5dp"
-                    android:layout_marginStart="7.5dp"
-                    android:gravity="center"
-                    android:text="头条"
-                    android:textColor="#e3151212"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="7.5dp"
-                    android:layout_marginStart="7.5dp"
-                    android:background="#85d6cece"
-                    android:gravity="center"
-                    android:text="抗击肺炎"
-                    android:textColor="#e3151212"
-                    android:textSize="18sp" />
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="7.5dp"
-                    android:layout_marginStart="7.5dp"
-                    android:gravity="center"
-                    android:text="视频"
-                    android:textColor="#e3151212"
-                    android:textSize="18sp" />
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="7.5dp"
-                    android:layout_marginStart="7.5dp"
-                    android:gravity="center"
-                    android:text="娱乐"
-                    android:textColor="#e3151212"
-                    android:textSize="18sp" />
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="7.5dp"
-                    android:layout_marginStart="7.5dp"
-                    android:gravity="center"
-                    android:text="体育"
-                    android:textColor="#e3151212"
-                    android:textSize="18sp" />
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="7.5dp"
-                    android:layout_marginStart="7.5dp"
-                    android:gravity="center"
-                    android:text="新时代"
-                    android:textColor="#e3151212"
-                    android:textSize="18sp" />
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="7.5dp"
-                    android:layout_marginStart="7.5dp"
-                    android:gravity="center"
-                    android:text="要闻"
-                    android:textColor="#e3151212"
-                    android:textSize="18sp" />
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="7.5dp"
-                    android:layout_marginStart="7.5dp"
-                    android:gravity="center"
-                    android:text="段子"
-                    android:textColor="#e3151212"
-
-                    android:textSize="18sp" />
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="7.5dp"
-                    android:layout_marginStart="7.5dp"
-                    android:gravity="center"
-                    android:text="知否"
-                    android:textColor="#e3151212"
-                    android:textSize="18sp" />
-
-
-            </LinearLayout>
-        </HorizontalScrollView>
-        <!--
-                    图像视图：设置图片缩放
-                    android:scaleType="fitXY"
-                        fitXY 表示占满整个容器 matrix 表时等比例缩放并且占满整个屏幕
-                    2.设置图片是否允许系统自动调整，接着设置图片最大宽度和高度。这两个属性通常配合使用
-                    android:adjustViewBounds="true"
-                        true表示允许系统自动调整
-                    android:maxWidth="30dp"
-                    android:maxHeight="30dp"
-                    3.设置图片表面着色，通常需要设置透明度
-                    android:tint="#70dc3c3c"
-                -->
-        <ImageView
-            android:layout_alignParentRight="true"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="right"
-            android:layout_marginEnd="6dp"
-            android:layout_marginTop="5dp"
-            android:adjustViewBounds="true"
-            android:maxHeight="30dp"
-            android:maxWidth="30dp"
-            android:src="@drawable/list"
-            android:tint="#70dc3c3c" />
-    </RelativeLayout>
-    <!--第三部分：新闻主题部分，选择了使用滚动条组件来实现-->
-    <!--第三部分：新闻主题部分，选择了使用滚动条组件来实现-->
-    <!--第三部分：新闻主题部分，选择了使用滚动条组件来实现-->
-    <!--注意：滚动条下仅仅允许有一个UI组件，如果要放置多个需要布局管理器配合使用-->
-    <ScrollView
+      <ImageView
         android:layout_width="match_parent"
-        android:layout_marginBottom="37dp"
-        android:layout_height="450dp"
-        android:layout_below="@+id/menu"
-        android:layout_centerInParent="true"
-        android:background="#FFFFFF"
-        android:scrollbars="none">
+        android:layout_height="wrap_content"
+        android:layout_margin="2px"
+        android:adjustViewBounds="true"
+        android:src="@drawable/content3" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="2px"
-                android:adjustViewBounds="true"
-                android:src="@drawable/content1" />
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="2px"
-                android:adjustViewBounds="true"
-                android:src="@drawable/content2" />
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="2px"
-                android:adjustViewBounds="true"
-                android:src="@drawable/content3" />
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="2px"
-                android:adjustViewBounds="true"
-                android:src="@drawable/content4" />
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="2px"
-                android:adjustViewBounds="true"
-                android:src="@drawable/content5" />
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="2px"
-                android:adjustViewBounds="true"
-                android:src="@drawable/content6" />
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="2px"
-                android:adjustViewBounds="true"
-                android:src="@drawable/content7" />
-        </LinearLayout>
-    </ScrollView>
-    <!--第四部分：底部菜单，线性布局管理器+图片查看器来实现-->
-    <!--第四部分：底部菜单，线性布局管理器+图片查看器来实现-->
-    <!--第四部分：底部菜单，线性布局管理器+图片查看器来实现-->
-    <LinearLayout
+      <ImageView
         android:layout_width="match_parent"
-        android:layout_height="37dp"
-        android:layout_alignParentBottom="true"
-        android:background="#d7f2e9e9"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="3dp">
+        android:layout_height="wrap_content"
+        android:layout_margin="2px"
+        android:adjustViewBounds="true"
+        android:src="@drawable/content4" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="28dp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/refresh" />
+      <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2px"
+        android:adjustViewBounds="true"
+        android:src="@drawable/content5" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="28dp"
-            android:layout_marginStart="28dp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/view"
-            android:tint="#c1685f5f" />
+      <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2px"
+        android:adjustViewBounds="true"
+        android:src="@drawable/content6" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="28dp"
-            android:layout_marginStart="28dp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/social" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginStart="28dp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/region" />
+      <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2px"
+        android:adjustViewBounds="true"
+        android:src="@drawable/content7" />
     </LinearLayout>
+  </ScrollView>
 </RelativeLayout>

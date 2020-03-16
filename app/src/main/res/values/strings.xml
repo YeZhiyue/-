@@ -1,54 +1,5 @@
 <resources>
-    <string name="app_name">Demo3</string>
-    <string name="title_activity_main2">Main2Activity</string>
-    <string name="cidian">Java Web  编程词典（个人版）主干目录
-    入门训练营\n
-    第1部分   从零开始\n
-    第1课   第 1 课  搭建开发环境\n
-    第1讲   课堂讲解\n
-    第2讲   照猫画虎——基本功训练\n
-    第3讲   情景应用——拓展与实践\n
-    第2课   第 2 课  JSP中的Java程序\n
-    第4讲   课堂讲解\n
-    第5讲   照猫画虎——基本功训练\n
-    第6讲   情景应用——拓展与实践\n
-    第3课   第 3 课  HTML语言与CSS样式\n
-    第7讲   课堂讲解\n
-    第8讲   照猫画虎——基本功训练\n
-    第9讲   情景应用——拓展与实践\n
-    第4课   第 4 课  JavaScript脚本语言\n
-    第10讲   课堂讲解\n
-    第11讲   照猫画虎——基本功训练\n
-    第12讲   情景应用——拓展与实践\n
-    第5课   第 5 课  掌握JSP语法\n
-    第13讲   课堂讲解\n
-    第14讲   照猫画虎——基本功训练\n
-    第15讲   情景应用——拓展与实践\n
-    第6课   第 6 课  使用JSP内置对象\n
-    第16讲   课堂讲解\n
-    第17讲   照猫画虎——基本功训练\n
-    第18讲   情景应用——拓展与实践\n</string>
-    <string name="textView1">微信</string>
-    <string name="textView2">通讯录</string>
-    <string name="textView3">QQ</string>
-    <string name="textView4">相机</string>
-    <string name="textView5">时钟</string>
-    <string name="textView6">备忘录</string>
-    <string name="textView7">音乐</string>
-    <string name="textView8">互联网</string>
-    <string name="textView9">邮件</string>
-    <string name="title_activity_child1">ChildActivity1</string>
-    <string name="title_activity_my_activity2_1">MyActivity2_1</string>
-        <string name="string_resource1"><b>加粗</b><i>斜体</i><u>下划线</u><font face="微软雅黑" color="red">font设置字体</font></string>
-        <string name="string_resource2">Hello, %1$s! You have %2$d new messages</string>
-        <!--格式化的字符串获取：String text = getString(R.string.welcome_messages, username, mailCount);-->
+  <!--格式化的字符串获取：String text = getString(R.string.welcome_messages, username, mailCount);-->
 
-
-        <plurals name="numberOfSongsAvailable">
-            <!--quantity可用的属性：["zero" | "one" | "two" | "few" | "many" | "other"]-->
-            <item quantity="one">Znaleziono %d piosenkę.</item>
-            <item quantity="few">Znaleziono %d piosenki.</item>
-            <item quantity="other">Znaleziono %d piosenek.</item>
-        </plurals>
 
 </resources>

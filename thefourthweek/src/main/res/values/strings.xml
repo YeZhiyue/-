@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">The fourth week</string>
+    <string-array name="string_array_resource">
+        <item>item1</item>
+        <item>item2</item>
+        <item>item3</item>
+        <item>item4</item>
+        <item>item5</item>
+        <!--需要在java中使用
+        Resources res = getResources();
+        String[] planets = res.getStringArray(R.array.planets_array);
+        for (String planet : planets) {
+            System.out.println(planet);
+        }
+        -->
+    </string-array>
+</resources>

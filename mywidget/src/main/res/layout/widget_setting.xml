@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    android:initialLayout="@layout/activity_my_widget"
+        表示初始化的时候指定的布局文件
+        android:widgetCategory="home_screen"
+        表示显示在主屏幕上，也可以设置为显示在锁屏上面
+        -->
+<appwidget-provider
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:initialLayout="@layout/activity_my_widget"
+    android:minHeight="140dp"
+    android:minWidth="140dp"
+    android:previewImage="@drawable/content1"
+    android:updatePeriodMillis="20000"
+    android:widgetCategory="home_screen"
+    >
+  <!--  <Button
+            android:id="@+id/button"
+            android:background="#444444"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="2px"
+            android:text="按钮"
+            android:textSize="10pt"
+            />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2px"
+            android:background="#444444"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="文本框"
+            android:textSize="14pt" />-->
+</appwidget-provider>

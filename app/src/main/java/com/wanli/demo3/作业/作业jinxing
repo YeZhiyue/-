@@ -1,0 +1,75 @@
+第五周任务：
+创建一个module, 使用java代码的方法建立一个sqlite3数据库,数据库表结构如下：
+学号	姓名	密码	手机号	邮箱
+ 	 	 	 	 
+实现向数据库中添加数据
+实现从数据库中查询数据
+统计数据库中记录的个数
+具体数据自行模拟
+
+
+create table  stu(studentID text primary key,name text not null,password text not null,email text);
+insert into stu values("2017010810","zhang1","00000","739153436@qq.com");
+delete from stu where name like "%七";
+update stu set password=1234 where name="张三";
+
+ 实验内容：
+
+
+ 参考例子编写一个用户UI界面，要求使用某种布局管理器，写出具体操作过程和截取必要截图，提交word版报告
+一、不加粗，微软雅黑  10.5号 字体大小
+/************************************************************************************/
+ 实验步骤：
+	步骤一：布局配置
+		1.配置主Activity的布局文件 activity_week5
+		  1.编辑框：用于输入sql语句
+		  2.按钮：进行SQL操作
+		  3.文本框：查看当前查询到的数据条数
+		  4.列表视图：用于罗列数据库查询到的数据
+		2.配置适配器布局文件 adapter_layout.xml
+		  1.配置列表视图布局
+		  2.每一行用于显示一条表的 数据
+    3.资源文件的配置
+      1.配置了字符串资源，用于当做初始化表的原始数据
+      2.配置了color资源
+	步骤二：配置数据库类DatebaseHeleper 和数据模板Student
+		1.数据库类DatebaseHeleper配置
+		  1.继承自SQLiteOpenHelper类
+		  2.重写其中的onCreate方法进行表的创建
+		2.数据库模板Students类
+		  1.根据表中的字段来配置类中的字段
+		  2.重写其中的getter、setter方法和toString方法方便调试
+	步骤三：编写主Activity文件
+		1.获取其中布局的组件对象
+		  1.文本框、编辑框、按钮、列表视图
+		2.获取DatebaseHeleper类进行数据库操作
+		  1.CRUD操作测试
+		3.query查询获取数据表内容
+		  1.将查询到的数据封装Student对象，然后加入到list中
+		4.listView刷新
+		  1.获取list中的封装数据
+		  2.通过适配器进行数据展示
+    5.注册按钮监听
+      1.获取文本框输入的sql文本内容
+      2.进行查询
+      3.更新list封装数据
+      4.刷新listView
+  步骤四：调试测试、适当优化代码
+
+实验结果：
+（演示的截图）
+
+图1：初始化的CRUD操作数据展示
+图2：模拟器的的列表展示
+图3：输入sql语句进行删除操作
+图4：输入SQL语句进行更新操作
+
+CRUD的SQL示范：
+
+create table  stu(studentID text primary key,name text not null,password text not null,email text);
+insert into stu values("2017010810","zhang1","00000","739153436@qq.com");
+delete from stu where name like "%七";
+update stu set password=1234 where name="张三";
+
+部分代码如下：
+

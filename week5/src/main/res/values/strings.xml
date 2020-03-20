@@ -1,0 +1,20 @@
+<resources>
+  <string name="app_name">Week5</string>
+  <string-array name="sql_data">
+    <item>2017010810,张三,00000,739153436@qq.com</item>
+    <item>2017010811,李四,00000,739542554@qq.com</item>
+    <item>2017010812,王五,00000,525253436@qq.com</item>
+    <item>2017010813,刘六,00000,624534356@qq.com</item>
+    <item>2017010814,孙七,00000,939523436@qq.com</item>
+    <item>2017010815,张八,00000,522534356@qq.com</item>
+    <item>2017010816,刘九,00000,739153526@qq.com</item>
+    <item>2017010817,苏十,00000,524915343@qq.com</item>
+    <!--需要在java中使用
+    Resources res = getResources();
+    String[] planets = res.getStringArray(R.array.planets_array);
+    for (String planet : planets) {
+        System.out.println(planet);
+    }
+    -->
+  </string-array>
+</resources>
